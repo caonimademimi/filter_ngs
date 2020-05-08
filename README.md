@@ -20,7 +20,7 @@ Installation method 2
 <pre><code>
 wget https://github.com/zxgsy520/filter_ngs/archive/v1.1.0.tar.gz
 tar -zxvf v1.1.0.tar.gz
-cd filter_ngs
+cd filter_ngs-1.1.0
 chmod 755 filter_ngs
 </code></pre>
 
