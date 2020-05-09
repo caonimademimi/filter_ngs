@@ -2,6 +2,7 @@
 Filtering erroneous data from mgi (MGISEQ) sequencing
 
 mgi (MGISEQ) sequencing will cause the following error reads:
+
 (1) A large number of N bases appear in reads.
 <pre><code>
 @V300015177L3C001R0341008922/1
@@ -17,7 +18,12 @@ GTCAATGGATTTGGGATATTGAGAGTATTTTCATCTTCGTGGCCGTGTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 99BEE=??8:4?<1:/E=8;>6@7=?=;EEE?5E9AEE66:>E:AGD4E>E&5E>8CC;F<77E9D<B85;;31F=??9E5=9E6;76)D3>51:;'0&2;?3E=>)2&//B>(&EB2883(0&C,DA+E,:>,1C.=6)*/<5E)C@E8
 </code></pre>
 (3)A large number of multi-base repeats in reads.
-
+<pre><code>
+@V300015177L3C001R009061026/1
+ATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATGATG
++
+FFFFFGFF>GFGEFFFFGFFFFGFFEGFFE@FFFFFFFFFFFFGFFBFFFFFFFFGFFFAFFFGGFFFFFGDFF?FFEFGFFFFFFGFGFGCFFFGBFEFCFFEEFGEFGFFFFCDF1FG?FBG=G:GGFAFGBEGFED9E?GCD=GFF>
+</code></pre>
 
 filter_ngs mainly filters the MGI data by the partial characteristics of the kmer and the CG content characteristics.
 
@@ -69,5 +75,18 @@ optional arguments:
   -O STR, --output2 STR
                         Output file R2.
  </code></pre>
+
+
+##Treatment effect
+MGI data is first processed with filter_ngs (default parameter).Use flye to assemble, use racon correction to correct 3 times using third-generation data, use pilon correction to use second-generation data twice, and use nextpolish (default parameter) to use second-generation data to correct once.
+###Comparison of sequencing depth and coverage
+The correction effect of MGI data processed with filter_ngs (default parameter) and Illumina data.
+Data Type	MGI	Illumina
+Depth	Base number	Coverage ratio(%)	Base number	Coverage ratio(%)
+1	3,124,148	99.99	3,124,219	99.99
+5	3,123,647	99.97	3,123,957	99.98
+10	3,123,345	99.96	3,123,877	99.98
+20	3,122,809	99.94	3,123,601	99.97
+Coverage depth(X)	514.98	516.8
 
 
