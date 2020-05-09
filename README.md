@@ -76,10 +76,9 @@ optional arguments:
                         Output file R2.
  </code></pre>
 
-
-##Treatment effect
+## Treatment effect
 MGI data is first processed with filter_ngs (default parameter).Use flye to assemble, use racon correction to correct 3 times using third-generation data, use pilon correction to use second-generation data twice, and use nextpolish (default parameter) to use second-generation data to correct once.
-###Comparison of sequencing depth and coverage
+### Comparison of sequencing depth and coverage
 The correction effect of MGI data processed with filter_ngs (default parameter) and Illumina data.
 <pre><code>
 Data Type	MGI	Illumina
@@ -90,7 +89,7 @@ Depth	Base number	Coverage ratio(%)	Base number	Coverage ratio(%)
 20	3,122,809	99.94	3,123,601	99.97
 Coverage depth(X)	514.98	516.8
  </code></pre>
- ###Single base accuracy assessment
+ ### Single base accuracy assessment
  <pre><code>
 Data Type	Depth	Hetero SNP	Hetero Indel	Homo SNP	Error rate by Homo SNP(%)	Homo Indel	Error rate by Homo Indel(%)	Error rate by homo variants(%)	Accuracy genome(%)
 MGI	depth>=1x	1	0	0	0	7	0	0.000224	99.999776
