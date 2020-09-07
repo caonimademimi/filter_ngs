@@ -47,9 +47,9 @@ chmod 755 filter_ngs
 
 Installation method 2
 <pre><code>
-wget https://github.com/zxgsy520/filter_ngs/archive/v1.1.0.tar.gz
-tar -zxvf v1.1.0.tar.gz
-cd filter_ngs-1.1.0
+wget https://github.com/zxgsy520/filter_ngs/archive/v1.2.0.tar.gz
+tar -zxvf v1.2.0.tar.gz
+cd filter_ngs-1.2.0
 chmod 755 filter_ngs
 </code></pre>
 
@@ -59,11 +59,11 @@ usage: filter_ngs [-h] -i FILE -I FILE [-kl INT] [-kc INT] [-kv INT] [-mb INT]
                   [-rl INT] [-o STR] [-O STR]
 
 name:
-    filter_ngs.py --The filter sequence contains N or kmer and gc have abnormal reads.
+    filter_ngs --The filter sequence contains N or kmer and gc have abnormal reads.
 
 attention:
-    filter_ngs.py --input1 R1.fastq.gz --input2 R2.fastq.gz
-version: 1.1.0
+    filter_ngs --input1 R1.fastq.gz --input2 R2.fastq.gz
+version: 1.2.0
 contact:  Xingguo Zhang <113178210@qq.com>    
 
 optional arguments:
